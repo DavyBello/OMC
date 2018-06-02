@@ -9,8 +9,7 @@ import {
   ItemGrid
 } from "components";
 
-// import avatar from "assets/img/faces/marc.jpg";
-const avatar = "/static/assets/img/faces/marc.jpg";
+import avatar from "assets/img/faces/marc.jpg";
 
 function UserProfile({ ...props }) {
   return (

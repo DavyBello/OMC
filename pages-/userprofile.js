@@ -9,10 +9,12 @@ import {
   ItemGrid
 } from "components";
 
+import withDashboard from '../components/withDashboard';
+
 // import avatar from "assets/img/faces/marc.jpg";
 const avatar = "/static/assets/img/faces/marc.jpg";
 
-function UserProfile({ ...props }) {
+const UserProfile = props => {
   return (
     <div>
       <Grid container>
@@ -144,4 +146,5 @@ function UserProfile({ ...props }) {
   );
 }
 
-export default UserProfile;
+// export default UserProfile;
+export default withDashboard(UserProfile);

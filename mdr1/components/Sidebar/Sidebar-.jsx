@@ -1,7 +1,6 @@
 import React from "react";
-import Link from 'next/link'
 import PropTypes from "prop-types";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import cx from "classnames";
 import {
   withStyles,
@@ -20,8 +19,7 @@ import sidebarStyle from "assets/jss/material-dashboard-react/sidebarStyle.jsx";
 const Sidebar = ({ ...props }) => {
   // verifies if routeName is the one active (in browser input)
   function activeRoute(routeName) {
-    // return props.location.pathname.indexOf(routeName) > -1 ? true : false;
-    return (routeName === props.url.pathname) ? true : false;
+    return props.location.pathname.indexOf(routeName) > -1 ? true : false;
   }
   const { classes, color, logo, image, logoText, routes } = props;
   var links = (
@@ -35,25 +33,23 @@ const Sidebar = ({ ...props }) => {
           [" " + classes.whiteFont]: activeRoute(prop.path)
         });
         return (
-          <Link
-            href={prop.path}
+          <NavLink
+            to={prop.path}
             className={classes.item}
             activeClassName="active"
             key={key}
-            >
-            {/* <a> */}
-              <ListItem button className={classes.itemLink + listItemClasses}>
-                <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
-                  <prop.icon />
-                </ListItemIcon>
-                <ListItemText
-                  primary={prop.sidebarName}
-                  className={classes.itemText + whiteFontClasses}
-                  disableTypography={true}
-                />
-              </ListItem>
-            {/* </a> */}
-          </Link>
+          >
+            <ListItem button className={classes.itemLink + listItemClasses}>
+              <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
+                <prop.icon />
+              </ListItemIcon>
+              <ListItemText
+                primary={prop.sidebarName}
+                className={classes.itemText + whiteFontClasses}
+                disableTypography={true}
+              />
+            </ListItem>
+          </NavLink>
         );
       })}
     </List>

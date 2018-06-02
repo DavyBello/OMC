@@ -15,13 +15,11 @@ import headerStyle from "assets/jss/material-dashboard-react/headerStyle.jsx";
 
 import HeaderLinks from "./HeaderLinks";
 
-// TODO Downgrade @material-ui/icons
-// TODO uncomment line 44 <HeaderLinks />
 function Header({ ...props }) {
   function makeBrand() {
     var name;
     props.routes.map((prop, key) => {
-      if (prop.path === props.url.pathname) {
+      if (prop.path === props.location.pathname) {
         name = prop.navbarName;
       }
       return null;
@@ -42,7 +40,7 @@ function Header({ ...props }) {
           </Button>
         </div>
         <Hidden smDown implementation="css">
-          {/* <HeaderLinks /> */}
+          <HeaderLinks />
         </Hidden>
         <Hidden mdUp>
           <IconButton
