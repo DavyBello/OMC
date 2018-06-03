@@ -2,7 +2,8 @@
   "name": "create-next-example-app",
   "scripts": {
     "dev": "set NODE_PATH=./mdr&& next",
-    "build": "NODE_PATH=./mdr next build",
+    "build": "set NODE_PATH=./mdr&& next build",
+    "heroku-postbuild": "NODE_PATH=./mdr next build",
     "start": "next start"
   },
   "dependencies": {
