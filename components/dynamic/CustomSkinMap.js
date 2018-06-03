@@ -1,4 +1,3 @@
-import React from "react";
 import {
   withScriptjs,
   withGoogleMap,
@@ -6,7 +5,7 @@ import {
   Marker
 } from "react-google-maps";
 
-const CustomSkinMap = withScriptjs(
+export default CustomSkinMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
       defaultZoom={13}
@@ -80,16 +79,3 @@ const CustomSkinMap = withScriptjs(
     </GoogleMap>
   ))
 );
-
-function Maps({ ...props }) {
-  return (
-    <CustomSkinMap
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
-      loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div style={{ height: `100vh` }} />}
-      mapElement={<div style={{ height: `100%` }} />}
-    />
-  );
-}
-
-export default Maps;

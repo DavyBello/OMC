@@ -41,7 +41,7 @@ const Sidebar = ({ ...props }) => {
             activeClassName="active"
             key={key}
             >
-            {/* <a> */}
+            <div>
               <ListItem button className={classes.itemLink + listItemClasses}>
                 <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
                   <prop.icon />
@@ -52,7 +52,7 @@ const Sidebar = ({ ...props }) => {
                   disableTypography={true}
                 />
               </ListItem>
-            {/* </a> */}
+            </div>
           </Link>
         );
       })}

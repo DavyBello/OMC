@@ -6,6 +6,7 @@ import { drawerWidth, transition, container } from "assets/jss/material-dashboar
 
 const appStyle = theme => ({
   wrapper: {
+    backgroundColor: "#efefef",
     position: "relative",
     top: "0",
     height: "100vh"

@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
 
+// import "assets/css/material-dashboard-react.css";
+// import "assets/css/material-dashboard-react.css?v=1.2.0";
+
 import { withStyles } from "material-ui";
 // import { withStyles } from "@material-ui/core/styles";
 import withRoot from '../src/withRoot';
@@ -18,7 +21,7 @@ import appStyle from "assets/jss/material-dashboard-react/appStyle.jsx";
 const image = "/static/assets/img/sidebar-2.jpg";
 const logo = "/static/assets/img/reactlogo.png";
 
-export default function withDashboard(Child, opts) {
+export default function withDashboard(Child, opts = {}) {
   class WrappedComponent extends Component {
     static async getInitialProps(context) {
       let ChildProps = {};
@@ -48,7 +51,6 @@ export default function withDashboard(Child, opts) {
     }
 
     render() {
-      const opts = opts || {};
       const { classes, ...rest } = this.props;
       // console.log(rest);
       return (

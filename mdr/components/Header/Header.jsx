@@ -42,7 +42,7 @@ function Header({ ...props }) {
           </Button>
         </div>
         <Hidden smDown implementation="css">
-          {/* <HeaderLinks /> */}
+          <HeaderLinks />
         </Hidden>
         <Hidden mdUp>
           <IconButton
