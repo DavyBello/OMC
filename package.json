@@ -4,7 +4,7 @@
     "dev": "set NODE_PATH=./mdr&& next",
     "build": "set NODE_PATH=./mdr&& next build",
     "heroku-postbuild": "NODE_PATH=./mdr next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@material-ui/core": "^1.1.0",
